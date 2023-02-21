@@ -3,7 +3,7 @@ package logic;
 import config.LottoConfiguration;
 import org.junit.jupiter.api.Test;
 
-import java.util.LinkedList;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,7 +14,7 @@ class RandomNumberGeneratorTest {
         //given
         RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
         //when
-        LinkedList<Integer> randomNumbers = randomNumberGenerator.generateRandomNumbers();
+        Set<Integer> randomNumbers = randomNumberGenerator.generateRandomNumbers();
         //then
         for (int number : randomNumbers){
             assertTrue(number >= LottoConfiguration.LOWER_BOUND && number <= LottoConfiguration.UPPER_BOUND,"Numbers are in range");
@@ -27,7 +27,7 @@ class RandomNumberGeneratorTest {
         RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
         int expectedSize = LottoConfiguration.HOW_MANY_NUMBERS;
         //when
-        LinkedList<Integer> randomNumbers = randomNumberGenerator.generateRandomNumbers();
+        Set<Integer> randomNumbers = randomNumberGenerator.generateRandomNumbers();
         int actualSize = randomNumbers.size();
         //then
         assertEquals(expectedSize, actualSize);
