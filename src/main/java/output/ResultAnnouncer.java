@@ -5,4 +5,5 @@ package output;
  */
 public class ResultAnnouncer {
     //TODO not implements
+
 }
