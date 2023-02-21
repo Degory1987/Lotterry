@@ -20,4 +20,16 @@ class RandomNumberGeneratorTest {
             assertTrue(number >= LottoConfiguration.LOWER_BOUND && number <= LottoConfiguration.UPPER_BOUND,"Numbers are in range");
         }
     }
+
+    @Test
+    void should_generate_6_random_numbers_passed(){
+        //given
+        RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
+        int expectedSize = LottoConfiguration.HOW_MANY_NUMBERS;
+        //when
+        LinkedList<Integer> randomNumbers = randomNumberGenerator.generateRandomNumbers();
+        int actualSize = randomNumbers.size();
+        //then
+        assertEquals(expectedSize, actualSize);
+    }
 }
