@@ -20,6 +20,4 @@ class RandomNumberGeneratorTest {
             assertTrue(number >= LottoConfiguration.LOWER_BOUND && number <= LottoConfiguration.UPPER_BOUND,"Numbers are in range");
         }
     }
-
-
 }
