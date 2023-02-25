@@ -1,42 +1,29 @@
 package input;
 
-import config.LottoConfiguration;
-
-import java.util.LinkedHashSet;
-import java.util.Scanner;
-import java.util.Set;
-
 /**
- * Class provide user numbers
+ * Class take numbers from user and stored it.
  */
 public class UserNumberDeliverer {
-    private final Set<Integer> userGivenNumbers = new LinkedHashSet<>();
-    public void getUserNumbers() {
-        Scanner scanner = new Scanner(System.in);
-        while (getAllNumber(userGivenNumbers)) {
-            int userNumber = scanner.nextInt();
-            if (!isInRange(userNumber)) {
-                System.out.println("NOT in RANGE!"); //TODO change this for some messages provider class
-            } else if (userGivenNumbers.contains(userNumber)) {
-                System.out.println();//TODO change this for some messages provider class
-            } else {
-                userGivenNumbers.add(userNumber);
-            }
+
+    private final UserInputReader userInputReader;
+    private final UserNumberStorage userNumberStorage;
+
+    public UserNumberDeliverer(UserInputReader userInputReader, DataValidator dataValidator, UserNumberStorage userNumberStorage) {
+        this.userInputReader = userInputReader;
+        this.userNumberStorage = userNumberStorage;
+    }
+    public void getUserNumbers(){
+        while (!userNumberStorage.isFull()){
+            int userNumber = userInputReader.readNumber();
+                if(DataValidator.isInRange(userNumber)){
+                    userNumberStorage.addNumber(userNumber);
+                    System.out.println("dodano " + userNumber);
+                }else {
+                    System.out.println("Niepoprawna liczba. Podaj inną");
+                }
         }
-        scanner.close();
+        userInputReader.close();
     }
-
-    public static boolean isInRange(int number) {
-        return number > 0 && number < 99;
-    }
-
-    public boolean getAllNumber(Set<Integer> numbers) {
-        return numbers.size() < LottoConfiguration.HOW_MANY_NUMBERS;
-    }
-
-//    public void displayGivenNumber(Set<Integer> givenNumbers) {
-//        for (Integer number : givenNumbers) {
-//            System.out.print(number + " ");
-//        }
-//    }
 }
+
+
