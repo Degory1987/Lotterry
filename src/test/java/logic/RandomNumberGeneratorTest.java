@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class RandomNumberGeneratorTest {
     
     @Test
-    void generateRandomNumbers_should_return_six_random_numbers_in_range(){
+    void generateRandomNumbers_should_return_true_if_random_numbers_are_in_range(){
         //given
         RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
         //when

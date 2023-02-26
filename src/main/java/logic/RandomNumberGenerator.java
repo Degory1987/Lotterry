@@ -2,15 +2,15 @@ package logic;
 
 import config.LottoConfiguration;
 
-import java.util.*;
+import java.util.LinkedHashSet;
+import java.util.Random;
+import java.util.Set;
 
 /**
  * Class generate random numbers for a draw
  */
 public class RandomNumberGenerator {
-    /**
-     * @return random numbers from 0 inclusive to 100 exclusive (UPPER_BOUND + 1)
-     */
+
     public Set<Integer> generateRandomNumbers() {
         Set<Integer> randomNumbersList = new LinkedHashSet<>();
         Random random = new Random();
