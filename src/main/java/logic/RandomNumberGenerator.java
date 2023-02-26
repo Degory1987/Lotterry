@@ -5,7 +5,7 @@ import config.LottoConfiguration;
 import java.util.*;
 
 /**
- * Class generate random numbers for a game
+ * Class generate random numbers for a draw
  */
 public class RandomNumberGenerator {
     /**

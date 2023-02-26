@@ -6,16 +6,21 @@ import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+/**
+ * this class holds user numbers
+ */
 public class UserNumberStorage {
     private final Set<Integer> userNumbers = new LinkedHashSet<>();
 
-    public void addNumber(int number){
+    void addNumber(int number) {
         userNumbers.add(number);
     }
-    public boolean isFull(){
+
+    boolean isFull() {
         return userNumbers.size() == LottoConfiguration.HOW_MANY_NUMBERS;
     }
-    public Set<Integer> getUserNumbers(){
+
+    public Set<Integer> getUserNumbers() {
         return Collections.unmodifiableSet(userNumbers);
     }
 }

@@ -3,6 +3,9 @@ package input;
 import java.io.InputStream;
 import java.util.Scanner;
 
+/**
+ * this class is responsible for reading numbers form the user
+ */
 public class UserInputReader {
 
     private final Scanner scanner;
@@ -10,11 +13,11 @@ public class UserInputReader {
     public UserInputReader(InputStream inputStream) {
          this.scanner = new Scanner(inputStream);
     }
-    public int readNumber(){
+    int readNumber(){
         System.out.println("Give number: ");
         return scanner.nextInt();
     }
-    public void close(){
+    void close(){
         scanner.close();
     }
 

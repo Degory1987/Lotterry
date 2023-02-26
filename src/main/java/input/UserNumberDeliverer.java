@@ -1,7 +1,7 @@
 package input;
 
 /**
- * Class take numbers from user and stored it.
+ * this class gets numbers from user and stored it.
  */
 public class UserNumberDeliverer {
 
@@ -18,9 +18,9 @@ public class UserNumberDeliverer {
             int userNumber = userInputReader.readNumber();
             if (DataValidator.isInRange(userNumber)) {
                 userNumberStorage.addNumber(userNumber);
-                System.out.println("dodano " + userNumber);
+                System.out.println("added " + userNumber);
             } else {
-                System.out.println("Niepoprawna liczba. Podaj inną");
+                System.out.println("Wrong number. Type another.");
             }
         }
         userInputReader.close();

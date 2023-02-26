@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class RandomNumberGeneratorTest {
     
     @Test
-    void should_return_random_numbers_in_range(){
+    void generateRandomNumbers_should_return_six_random_numbers_in_range(){
         //given
         RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
         //when
@@ -22,7 +22,7 @@ class RandomNumberGeneratorTest {
     }
 
     @Test
-    void should_generate_6_random_numbers_passed(){
+    void generateRandomNumbers_should_return_set_with_size_equals_HOW_MANY_NUMBERS(){
         //given
         RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
         int expectedSize = LottoConfiguration.HOW_MANY_NUMBERS;
