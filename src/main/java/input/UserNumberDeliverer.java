@@ -8,19 +8,20 @@ public class UserNumberDeliverer {
     private final UserInputReader userInputReader;
     private final UserNumberStorage userNumberStorage;
 
-    public UserNumberDeliverer(UserInputReader userInputReader, DataValidator dataValidator, UserNumberStorage userNumberStorage) {
+    public UserNumberDeliverer(UserInputReader userInputReader, UserNumberStorage userNumberStorage) {
         this.userInputReader = userInputReader;
         this.userNumberStorage = userNumberStorage;
     }
-    public void getUserNumbers(){
-        while (!userNumberStorage.isFull()){
+
+    public void getUserNumbers() {
+        while (!userNumberStorage.isFull()) {
             int userNumber = userInputReader.readNumber();
-                if(DataValidator.isInRange(userNumber)){
-                    userNumberStorage.addNumber(userNumber);
-                    System.out.println("dodano " + userNumber);
-                }else {
-                    System.out.println("Niepoprawna liczba. Podaj inną");
-                }
+            if (DataValidator.isInRange(userNumber)) {
+                userNumberStorage.addNumber(userNumber);
+                System.out.println("dodano " + userNumber);
+            } else {
+                System.out.println("Niepoprawna liczba. Podaj inną");
+            }
         }
         userInputReader.close();
     }

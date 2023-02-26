@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class UserInputReader {
 
-    private Scanner scanner;
+    private final Scanner scanner;
 
     public UserInputReader(InputStream inputStream) {
-        Scanner scanner = new Scanner(inputStream);
+         this.scanner = new Scanner(inputStream);
     }
     public int readNumber(){
         System.out.println("Give number: ");
