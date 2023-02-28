@@ -3,14 +3,15 @@ package input;
 import config.LottoConfiguration;
 
 import java.util.Collections;
-import java.util.LinkedHashSet;
+import java.util.HashSet;
 import java.util.Set;
 
 /**
  * this class holds user numbers
  */
 public class UserNumberStorage {
-    private final Set<Integer> userNumbers = new LinkedHashSet<>();
+    private final Set<Integer> userNumbers = new
+            HashSet<>();
 
     void addNumber(int number) {
         userNumbers.add(number);

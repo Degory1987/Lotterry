@@ -2,7 +2,7 @@ package logic;
 
 import config.LottoConfiguration;
 
-import java.util.LinkedHashSet;
+import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
@@ -12,7 +12,7 @@ import java.util.Set;
 public class RandomNumberGenerator {
 
     public Set<Integer> generateRandomNumbers() {
-        Set<Integer> randomNumbersList = new LinkedHashSet<>();
+        Set<Integer> randomNumbersList = new HashSet<>();
         Random random = new Random();
         for (int i = 0; i < LottoConfiguration.HOW_MANY_NUMBERS; i++) {
             random.nextInt(LottoConfiguration.UPPER_BOUND + 1);
