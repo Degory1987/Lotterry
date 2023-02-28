@@ -10,8 +10,7 @@ import java.util.Set;
  * this class holds user numbers
  */
 public class UserNumberStorage {
-    private final Set<Integer> userNumbers = new
-            HashSet<>();
+    private final Set<Integer> userNumbers = new HashSet<>();
 
     void addNumber(int number) {
         userNumbers.add(number);

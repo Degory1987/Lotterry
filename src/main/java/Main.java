@@ -15,15 +15,15 @@ public class Main {
         UserInputReader userInputReader = new UserInputReader(System.in);
         UserNumberStorage userNumberStorage = new UserNumberStorage();
         RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
-        Set<Integer> randomIntegers = randomNumberGenerator.generateRandomNumbers();
         UserNumberDeliverer userNumberDeliverer = new UserNumberDeliverer(userInputReader,userNumberStorage);
-
         userNumberDeliverer.getUserNumbers();
-        Set<Integer> userNumbers = userNumberStorage.getUserNumbers();
 
-        System.out.println(userNumberStorage.getUserNumbers());
+        Set<Integer> randomIntegers = randomNumberGenerator.generateRandomNumbers();
+        Set<Integer> userNumbers = userNumberStorage.getUserNumbers();
         ResultChecker resultChecker = new ResultChecker(userNumbers, randomIntegers);
         ResultAnnouncer resultAnnouncer = new ResultAnnouncer(resultChecker);
+
+        System.out.println(userNumberStorage.getUserNumbers());
         resultAnnouncer.lottoResultAnnouncer();
 
     }
