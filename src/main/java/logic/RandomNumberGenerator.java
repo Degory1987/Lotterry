@@ -11,7 +11,11 @@ import java.util.Set;
  */
 public class RandomNumberGenerator {
 
-    private Random random;
+    private final Random random = new Random();
+
+    public RandomNumberGenerator() {
+    }
+
     public Set<Integer> generateRandomNumbers() {
         Set<Integer> randomNumbersList = new HashSet<>();
         while (randomNumbersList.size() <= LottoConfiguration.HOW_MANY_NUMBERS) {
