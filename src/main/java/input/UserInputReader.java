@@ -13,7 +13,7 @@ public class UserInputReader {
     public UserInputReader(InputStream inputStream) {
          this.scanner = new Scanner(inputStream);
     }
-    int readNumber(){
+    int readNumber(){ //TODO write test
         System.out.println("Give number: ");
         return scanner.nextInt();
     }

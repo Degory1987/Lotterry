@@ -15,7 +15,7 @@ public class RandomNumberGenerator {
 
     public Set<Integer> generateRandomNumbers() {
         Set<Integer> randomNumbersList = new HashSet<>();
-        while (randomNumbersList.size() <= LottoConfiguration.HOW_MANY_NUMBERS) {
+        while (randomNumbersList.size() < LottoConfiguration.HOW_MANY_NUMBERS) {
             randomNumbersList.add(getRandomNumber());
         }
         return randomNumbersList;
