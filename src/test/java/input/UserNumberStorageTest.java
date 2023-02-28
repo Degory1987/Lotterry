@@ -27,7 +27,7 @@ class UserNumberStorageTest {
             userNumberStorage.addNumber(i);
         }
         //then
-        assertTrue(userNumberStorage.isFull());
+        assertTrue(userNumberStorage.getAllNumbers());
     }
 
     @Test
@@ -40,7 +40,7 @@ class UserNumberStorageTest {
             userNumberStorage.addNumber(howManyNumbers);
         }
         //then
-        assertFalse(userNumberStorage.isFull());
+        assertFalse(userNumberStorage.getAllNumbers());
     }
     @Test
     void isFull_should_return_false_when_userStorage_size_is_bigger_than_HOW_MANY_NUMBERS(){
@@ -52,6 +52,6 @@ class UserNumberStorageTest {
             userNumberStorage.addNumber(howManyNumbers);
         }
         //then
-        assertFalse(userNumberStorage.isFull());
+        assertFalse(userNumberStorage.getAllNumbers());
     }
 }

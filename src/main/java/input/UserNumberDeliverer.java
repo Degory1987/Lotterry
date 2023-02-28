@@ -14,7 +14,7 @@ public class UserNumberDeliverer {
     }
 
     public void getUserNumbers() {
-        while (!userNumberStorage.isFull()) {
+        while (!userNumberStorage.getAllNumbers()) {
             int userNumber = userInputReader.readNumber();
             if (DataValidator.isInRange(userNumber)) {
                 userNumberStorage.addNumber(userNumber);

@@ -16,7 +16,7 @@ public class UserNumberStorage {
         userNumbers.add(number);
     }
 
-    boolean isFull() {
+    boolean getAllNumbers() {
         return userNumbers.size() == LottoConfiguration.HOW_MANY_NUMBERS;
     }
 
