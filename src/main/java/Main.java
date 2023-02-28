@@ -21,6 +21,7 @@ public class Main {
         Set<Integer> randomIntegers = randomNumberGenerator.generateRandomNumbers();
         Set<Integer> userNumbers = userNumberStorage.getUserNumbers();
         ResultChecker resultChecker = new ResultChecker(userNumbers, randomIntegers);
+        resultChecker.getLottoResult(userNumbers,randomIntegers);
         ResultAnnouncer resultAnnouncer = new ResultAnnouncer(resultChecker);
 
         System.out.println(userNumberStorage.getUserNumbers());

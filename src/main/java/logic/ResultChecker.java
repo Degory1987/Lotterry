@@ -24,6 +24,6 @@ public class ResultChecker {
         }
     }
     public boolean ifWin(){
-        return finalHitNumbers.equals(randomNumbers);// if player win, return true
+        return finalHitNumbers.equals(randomNumbers);
     }
 }
