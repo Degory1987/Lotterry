@@ -4,7 +4,7 @@ import java.io.InputStream;
 import java.util.Scanner;
 
 /**
- * this class is responsible for reading numbers form the user
+ * this class is responsible for reading input form the user
  */
 public class UserInputReader {
 
@@ -13,6 +13,7 @@ public class UserInputReader {
     public UserInputReader(InputStream inputStream) {
          this.scanner = new Scanner(inputStream);
     }
+
     int readNumbers(){ //TODO write test
         return scanner.nextInt();
     }

@@ -26,6 +26,9 @@ public class ResultChecker {
             }
         }
     }
+    public void printHowManyNumbersHit(){
+        System.out.println("You hit " + finalHitNumbers.size() +" numbers.");
+    }
     public boolean ifWin(){
         return finalHitNumbers.equals(randomNumberGenerator.getRandomNumbersList());
     }

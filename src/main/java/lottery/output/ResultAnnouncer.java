@@ -12,6 +12,7 @@ public class ResultAnnouncer {
     }
 
     public void lottoResultAnnouncer(){
+        resultChecker.printHowManyNumbersHit();
         if(resultChecker.ifWin()){
             System.out.println("you win");
         }else {

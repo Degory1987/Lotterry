@@ -30,6 +30,7 @@ public class LottoGame {
         return userNumberStorage;
     }
 
+
     private static void printUserAndRandomNumbers(UserNumberStorage userNumberStorage, RandomNumberGenerator randomNumberGenerator) {
         UserNumberPrinter userNumberPrinter = new UserNumberPrinter();
         RandomNumberPrinter randomNumberPrinter = new RandomNumberPrinter();
