@@ -1,6 +1,6 @@
-package output;
+package lottery.output;
 
-import logic.ResultChecker;
+import lottery.logic.ResultChecker;
 
 /**
  * generated result info for player

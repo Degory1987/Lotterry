@@ -1,4 +1,6 @@
-package input;
+package lottery.input;
+
+import lottery.config.LottoConfiguration;
 
 /**
  * this class gets numbers from user and stored it.
@@ -14,13 +16,15 @@ public class UserNumberDeliverer {
     }
 
     public void getUserNumbers() {
+        System.out.println("Give 6 numbers separated by space: ");
         while (!userNumberStorage.getAllNumbers()) {
-            int userNumber = userInputReader.readNumber();
+            int userNumber = userInputReader.readNumbers();
             if (DataValidator.isInRange(userNumber)) {
                 userNumberStorage.addNumber(userNumber);
-                System.out.println("added " + userNumber);
             } else {
-                System.out.println("Wrong number. Type another.");
+                System.out.println("Wrong number. Type another from "
+                        + LottoConfiguration.LOWER_BOUND + " to "
+                        + LottoConfiguration.UPPER_BOUND);
             }
         }
         userInputReader.close();

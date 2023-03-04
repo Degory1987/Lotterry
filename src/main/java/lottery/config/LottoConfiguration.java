@@ -1,4 +1,4 @@
-package config;
+package lottery.config;
 
 /**
  * this class contains Lotto game config parameters

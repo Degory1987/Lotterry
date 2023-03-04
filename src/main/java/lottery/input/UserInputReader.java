@@ -1,4 +1,4 @@
-package input;
+package lottery.input;
 
 import java.io.InputStream;
 import java.util.Scanner;
@@ -13,8 +13,7 @@ public class UserInputReader {
     public UserInputReader(InputStream inputStream) {
          this.scanner = new Scanner(inputStream);
     }
-    int readNumber(){ //TODO write test
-        System.out.println("Give number: ");
+    int readNumbers(){ //TODO write test
         return scanner.nextInt();
     }
     void close(){

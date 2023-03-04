@@ -1,6 +1,6 @@
-package logic;
+package lottery.logic;
 
-import config.LottoConfiguration;
+import lottery.config.LottoConfiguration;
 
 import java.util.HashSet;
 import java.util.Random;

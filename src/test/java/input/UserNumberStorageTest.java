@@ -1,6 +1,7 @@
 package input;
 
-import config.LottoConfiguration;
+import lottery.config.LottoConfiguration;
+import lottery.input.UserNumberStorage;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,6 +1,7 @@
 package logic;
 
-import config.LottoConfiguration;
+import lottery.config.LottoConfiguration;
+import lottery.logic.RandomNumberGenerator;
 import org.junit.jupiter.api.Test;
 
 import java.util.Set;

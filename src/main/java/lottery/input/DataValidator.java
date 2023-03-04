@@ -1,6 +1,6 @@
-package input;
+package lottery.input;
 
-import config.LottoConfiguration;
+import lottery.config.LottoConfiguration;
 
 /**
  * this class is responsible for validation numbers used in draw
