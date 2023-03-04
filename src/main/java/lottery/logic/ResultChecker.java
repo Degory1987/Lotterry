@@ -27,6 +27,6 @@ public class ResultChecker {
         }
     }
     public boolean ifWin(){
-        return finalHitNumbers.equals(randomNumberGenerator);
+        return finalHitNumbers.equals(randomNumberGenerator.getRandomNumbersList());
     }
 }
