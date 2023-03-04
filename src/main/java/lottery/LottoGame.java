@@ -1,6 +1,5 @@
 package lottery;
 
-import lottery.config.AppMessageHolder;
 import lottery.input.UserInputReader;
 import lottery.input.UserNumberDeliverer;
 import lottery.input.UserNumberStorage;
