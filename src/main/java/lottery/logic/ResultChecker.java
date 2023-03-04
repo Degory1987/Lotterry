@@ -8,12 +8,12 @@ import java.util.Set;
  */
 public class ResultChecker {
 
-    private final Set<Integer> randomNumbers;
+    private final RandomNumberGenerator randomNumberGenerator;
     private Set<Integer> finalHitNumbers;
 
-    public ResultChecker(Set<Integer> finalHitNumbers, Set<Integer> randomNumbers) {
+    public ResultChecker(RandomNumberGenerator randomNumberGenerator, Set<Integer> finalHitNumbers) {
+        this.randomNumberGenerator = randomNumberGenerator;
         this.finalHitNumbers = finalHitNumbers;
-        this.randomNumbers = randomNumbers;
     }
 
     public void getLottoResult(Set<Integer> userNumberStorage, Set<Integer> randomNumbers) {
@@ -27,6 +27,6 @@ public class ResultChecker {
         }
     }
     public boolean ifWin(){
-        return finalHitNumbers.equals(randomNumbers);
+        return finalHitNumbers.equals(randomNumberGenerator);
     }
 }
