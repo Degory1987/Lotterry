@@ -12,9 +12,9 @@ import java.util.Set;
 public class RandomNumberGenerator {
 
     private final Random random = new Random();
+    Set<Integer> randomNumbersList = new HashSet<>();
 
     public Set<Integer> generateRandomNumbers() {
-        Set<Integer> randomNumbersList = new HashSet<>();
         while (randomNumbersList.size() < LottoConfiguration.HOW_MANY_NUMBERS) {
             randomNumbersList.add(getRandomNumber());
         }
@@ -23,6 +23,10 @@ public class RandomNumberGenerator {
 
     private int getRandomNumber() {
         return random.nextInt(LottoConfiguration.UPPER_BOUND + 1);
+    }
+
+    public Set<Integer> getRandomNumbersList() {
+        return this.randomNumbersList;
     }
 }
 
