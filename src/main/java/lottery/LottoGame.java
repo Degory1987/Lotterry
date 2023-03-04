@@ -13,10 +13,8 @@ import lottery.output.UserNumberPrinter;
 
 public class LottoGame {
     public static void startGame() {
-
+        System.out.println(AppMessagePrinter.WELCOME_MESSAGE);
         System.out.println(AppMessagePrinter.LOTTERY_MENU);
-        System.out.println(AppMessagePrinter.LOTTERY_MENU);
-
         UserNumberStorage userNumberStorage = getUserNumbersFromUserInput();
         RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
         randomNumberGenerator.generateRandomNumbers();
