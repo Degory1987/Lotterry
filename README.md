@@ -1,5 +1,5 @@
 General Info
-Classic lottery game, created as part of the course:
+Classic lottery game.
 
 Use case scenario:
 User gives six numbers from 0 to 99.
