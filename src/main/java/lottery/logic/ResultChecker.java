@@ -1,5 +1,7 @@
 package lottery.logic;
 
+import lottery.config.AppMessagePrinter;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -27,7 +29,7 @@ public class ResultChecker {
         }
     }
     public void printHowManyNumbersHit(){
-        System.out.println("You hit " + finalHitNumbers.size() +" numbers.");
+        System.out.printf((AppMessagePrinter.HIT_NUMBERS) + "%n", finalHitNumbers.size());
     }
     public boolean ifWin(){
         return finalHitNumbers.equals(randomNumberGenerator.getRandomNumbersList());
