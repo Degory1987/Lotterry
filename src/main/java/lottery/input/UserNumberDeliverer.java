@@ -1,5 +1,6 @@
 package lottery.input;
 
+import lottery.config.AppMessagePrinter;
 import lottery.config.LottoConfiguration;
 
 /**
@@ -16,7 +17,7 @@ public class UserNumberDeliverer {
     }
 
     public void getUserNumbers() {
-        System.out.println("Give 6 numbers separated by space: ");
+        System.out.printf((AppMessagePrinter.GIVE_NUMBERS) + "%n", LottoConfiguration.HOW_MANY_NUMBERS);
         while (!userNumberStorage.getAllNumbers()) {
             int userNumber = userInputReader.readNumbers();
             if (DataValidator.isInRange(userNumber)) {
