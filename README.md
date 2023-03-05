@@ -8,3 +8,6 @@ Program compares users numbers with random numbers.
 Prints information about the results of draw.
 SetUp
 To run program, download .zip unpack and open it in IDE, or clone repo directly to IDE.
+
+Technology
+Java 17, Maven, JUnit5.
