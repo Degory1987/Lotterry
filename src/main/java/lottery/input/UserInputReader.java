@@ -11,14 +11,14 @@ public class UserInputReader {
     private final Scanner scanner;
 
     public UserInputReader(InputStream inputStream) {
-         this.scanner = new Scanner(inputStream);
+        this.scanner = new Scanner(inputStream);
     }
 
-    int readNumbers(){ //TODO write test
-        return scanner.nextInt();
-    }
-    void close(){
+    void close() {
         scanner.close();
     }
 
+    public String userInputReader() {
+        return scanner.next();
+    }
 }
