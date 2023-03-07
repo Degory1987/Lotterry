@@ -14,7 +14,7 @@ public class UserInputReader {
          this.scanner = new Scanner(inputStream);
     }
 
-    int readNumbers(){
+    int readNumbers(){ //TODO write test
         return scanner.nextInt();
     }
     void close(){
