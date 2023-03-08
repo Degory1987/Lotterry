@@ -7,15 +7,16 @@ import lottery.logic.ResultChecker;
  */
 public class ResultAnnouncer {
     private final ResultChecker resultChecker;
+
     public ResultAnnouncer(ResultChecker resultChecker) {
         this.resultChecker = resultChecker;
     }
 
-    public void lottoResultAnnouncer(){
+    public void lottoResultAnnouncer() {
         resultChecker.printHowManyNumbersHit();
-        if(resultChecker.ifWin()){
+        if (resultChecker.ifWin()) {
             System.out.println("you win");
-        }else {
+        } else {
             System.out.println("Maybe next time!");
         }
     }

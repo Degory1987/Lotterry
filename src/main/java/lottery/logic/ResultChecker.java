@@ -28,10 +28,12 @@ public class ResultChecker {
             }
         }
     }
-    public void printHowManyNumbersHit(){
+
+    public void printHowManyNumbersHit() {
         System.out.printf((AppMessagePrinter.HIT_NUMBERS) + "%n", finalHitNumbers.size());
     }
-    public boolean ifWin(){
+
+    public boolean ifWin() {
         return finalHitNumbers.equals(randomNumberGenerator.getRandomNumbersList());
     }
 }
