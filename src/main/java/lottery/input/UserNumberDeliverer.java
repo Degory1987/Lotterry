@@ -19,7 +19,7 @@ public class UserNumberDeliverer {
     public void getUserNumbers() {
         System.out.printf((AppMessagePrinter.GIVE_NUMBERS) + "%n", LottoConfiguration.HOW_MANY_NUMBERS);
         while (!userNumberStorage.getAllNumbers()) {
-            String userInput = userInputReader.userInputReader();
+            String userInput = userInputReader.inputReader();
             if (DataValidator.isNumber(userInput)) {
                 int userNumber = Integer.parseInt(userInput);
                 if (DataValidator.isInRange(userNumber)) {
