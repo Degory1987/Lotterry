@@ -18,7 +18,7 @@ public class UserInputReader {
         scanner.close();
     }
 
-    public String userInputReader() {
+    String inputReader() {
         return scanner.next();
     }
 }
